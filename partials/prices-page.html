@@ -22,9 +22,9 @@
 
   <div>
 	  <div ng-repeat="vehicle in vehicles | filter:carSearchText">
-	  	<a href="#/vehicles/{{vehicle.id}}">
 		  	<img class="carImg" ng-src="{{vehicle.image}}" height="25%" width= "25%"/>
-		    <h3>{{vehicle.make}} {{vehicle.model}} {{vehicle.year}}</h3>
-	    </a>
+		    <h3><a href="#/info/{{ vehicles.$id }}">{{vehicle.make}} {{vehicle.model}} {{vehicle.year}}</a></h3>
+
 	  </div>
 	</div>
+
