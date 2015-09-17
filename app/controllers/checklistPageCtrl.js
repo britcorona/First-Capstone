@@ -31,5 +31,6 @@ define([
 			$scope.newToDo = {"":""};
 		};
 
+
 	}]);
 });

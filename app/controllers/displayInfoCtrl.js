@@ -1,8 +1,9 @@
 define([
 	'angular',
 	'firebase',
-	'angularRoute'
-], function(angular, firebase, angularRoute) {
+	'angularRoute',
+	'jquery'
+], function(angular, firebase, angularRoute, $) {
 	angular.module("CapstoneApp.displayInfoCtrl", ['ngRoute'])
 		.config(['$routeProvider', function($routeProvider) {
 			$routeProvider
