@@ -1,30 +1,27 @@
-<link rel="stylesheet" type="text/css" href="http://bootswatch.com/sandstone/bootstrap.min.css">
-
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-    </div>
-
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-      	<li class="active"><a href="#">Car Part Prices</a></li>
-        <li><a href="/#/checklist">View Checklist</a></li>
-      </ul>
-    </div>
-  </div>
+<nav id="cssmenu">
+	<input class="typeHere" type="text" ng-model="carSearchText" placeholder="Make/Model/Year" />
+		<h4 class="wordingInNav">Select a vechile to see part prices or search.</h4>
+			<ul>
+				<li><a href="/#/">Home</a></li>
+				<li class="active"><a href="#">Car Part Prices</a></li>
+		    <li><a href="/#/checklist">View Checklist</a></li>
+			</ul>
 </nav>
 
-<div>
 
-	<h3>Select a Car</h3> <input class="searchBar" type="text" ng-model="carSearchText" placeholder="Search by Make/Model/Year" />
-
-</div>
-
-  <div>
-	  <div ng-repeat="vehicle in vehicles | filter:carSearchText">
-		  	<img class="carImg" ng-src="{{vehicle.image}}" height="25%" width= "25%"/>
-		    <h3><a href="#/info/{{ vehicles.$id }}">{{vehicle.make}} {{vehicle.model}} {{vehicle.year}}</a></h3>
-
-	  </div>
-	</div>
+		<!-- codepens example -->
+		
+		<div ng-repeat="vehicle in vehicles | filter:carSearchText">
+		  <ul class="hopethisworks">
+		  	<a href="#/info/{{ vehicle.$id }}">
+			    <li>
+			      <img class="carImg" ng-src="{{vehicle.image}}" height="35%" width= "35%">
+			      <h5>{{vehicle.make}}</h5>
+			      <h5>{{vehicle.model}}</h5>
+			      <h5>{{vehicle.year}}</h5>
+			      <!-- <p> </p> -->
+			    </li>
+		   	</a>
+		   </ul>
+		</div>
 

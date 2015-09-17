@@ -1,10 +1,63 @@
 <div>
   <div ng-repeat="vehicle in vehicles | filter:{id:id}">
 
-	<div>
-		<h4>is this working</h4>
-		{{vehicle.autozoneparts[0].Battery}}
-	</div>
+	<table>
+	<col width="40%">
+	<!-- <col width="15%" height="10%"> -->
+	<!-- <col width="15%" height="10%"> -->
+		<tr>
+			<th>Name</th>
+			<th>AutoZone Price</th>
+			<th>O'Reilly's Auto Price</th>
+		</tr>
+		<tr>
+			<td><img class="partImg" ng-src="{{vehicle.autozoneparts[0].image}}" height="30%" width= "25%"/>{{vehicle.autozoneparts[0].Battery}}</td>
+			<td>{{vehicle.autozoneparts[0].Price}}</td>
+			<td>O'reillys price here</td>
+		</tr>
+
+		<tr>
+			<td><img class="partImg" ng-src="{{vehicle.autozoneparts[1].image}}" height="30%" width= "25%"/>{{vehicle.autozoneparts[1].Starter}}</td>
+			<td>{{vehicle.autozoneparts[1].Price}}</td>
+			<td>O'reillys price here</td>
+		</tr>
+
+		<tr>
+			<td><img class="partImg" ng-src="{{vehicle.autozoneparts[2].image}}" height="30%" width= "25%"/>{{vehicle.autozoneparts[2].Radiator}}</td>
+			<td>{{vehicle.autozoneparts[2].Price}}</td>
+			<td>O'reillys price here</td>
+		</tr>
+
+		<tr>
+			<td><img class="partImg" ng-src="{{vehicle.autozoneparts[3].image}}" height="30%" width= "25%"/>{{vehicle.autozoneparts[3].Water_Pump}}</td>
+			<td>{{vehicle.autozoneparts[3].Price}}</td>
+			<td>O'reillys price here</td>
+		</tr>
+
+		<tr>
+			<td><img class="partImg" ng-src="{{vehicle.autozoneparts[4].image}}" height="30%" width= "25%"/>{{vehicle.autozoneparts[4].Brake_Rotors_Front}}</td>
+		<td>{{vehicle.autozoneparts[4].Price}}</td>
+		<td>O'reillys price here</td>
+		<tr>
+
+		<tr>
+			<td>{{vehicle.autozoneparts[5].Fuel_Pump}}</td>
+			<td>{{vehicle.autozoneparts[5].Price}}</td>
+			<td>O'reillys price here</td>
+		</tr>
+
+		<tr>
+			<td><img class="partImg" ng-src="{{vehicle.autozoneparts[7].image}}" height="30%" width= "25%"/>{{vehicle.autozoneparts[7].Timing_Belt_Chain}}</td>
+			<td>{{vehicle.autozoneparts[7].Price}}</td>
+			<td>O'reillys price here</td>
+		</tr>
+
+		<tr>
+			<td><img class="partImg" ng-src="{{vehicle.autozoneparts[8].image}}" height="30%" width= "25%"/>{{vehicle.autozoneparts[8].Thermostat}}</td>
+			<td>{{vehicle.autozoneparts[8].Price}}</td>
+			<td>O'reillys price here</td>
+		</tr>
+	</table>
 
 	</div>
 </div>

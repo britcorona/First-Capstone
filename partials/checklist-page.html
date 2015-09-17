@@ -1,1 +1,34 @@
-<p>This is the checklist page</p>
+<nav id="cssmenu">
+	<ul>
+		<li><a href="/#/">Home</a></li>
+		<li><a href="#/prices">Car Part Prices</a></li>
+    <li class="active"><a href="/#/checklist">View Checklist</a></li>
+	</ul>
+</nav>
+
+	<h4 class="wordingInNav2">Your vehicle serivce checklist.</h4>
+
+	<form id="formToDo">
+  <div class="form-group">
+    <label for="nameTodo">Name</label>
+    <input type="text" class="form-control" id="nameTodo" placeholder="Repair" ng-model="newToDo.name">
+  </div>
+  <div class="form-group">
+    <label for="dateToDo">Date</label>
+    <input type="text" class="form-control" id="dateToDo" placeholder="ex: mm/dd/yy" ng-model="newToDo.date">
+  </div>
+  <div class="form-group">
+    <label for="odometerToDo">Odometer</label>
+    <input type="text" class="form-control" id="odometerToDo" placeholder="83900" ng-model="newToDo.odometer">
+  </div>
+  <button class="btn btn-default submitButton" ng-click="addToDo()">Submit</button>
+</form>
+
+
+	<div ng-repeat="todo in todos">
+	  <ul>
+		    <li>
+		      {{todo.name}} {{todo.date}} {{todo.odometer}}
+		    </li>
+	   </ul>
+	</div>

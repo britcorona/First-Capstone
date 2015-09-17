@@ -6,7 +6,7 @@ define([
 	angular.module("CapstoneApp.displayInfoCtrl", ['ngRoute'])
 		.config(['$routeProvider', function($routeProvider) {
 			$routeProvider
-			.when('/info', {
+			.when('/info/:vehicleId', {
 				templateUrl: '../partials/info.html',
 				controller: 'infoCtrl',
 				controllerAs: 'displayInfoCtrl'
@@ -20,7 +20,7 @@ define([
 		 // download the data into a local object
 		  $scope.vehicles = $firebaseArray(ref);
 
-		  $scope.id = $routeParams.songId;
+		  $scope.id = $routeParams.vehicleId;
 
 	}]);
 });

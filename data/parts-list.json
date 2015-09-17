@@ -2,61 +2,78 @@
   "vehicles": [
     {
       "make": "Nissan",
-      "id": 1,
+      "id": 0,
       "model": "370Z",
       "year": "2010",
       "image": "http://zombdrive.com/images/2010-nissan-370z-1.jpg",
       "autozoneparts": [
         {
-          "Battery": "Duralast Platinum/Battery $176.99",
+          "Battery": "Duralast Platinum/Battery",
+          "Price": "$176.99",
           "image": "http://contentinfo.autozone.com/znetcs/product-info/en/US/jci/35-AGM/image/3/"
         },
         {
-          "Starter": "Duralast/Starter $394.99",
+          "Starter": "Duralast/Starter",
+          "Price": "$394.99",
           "image": "http://contentinfo.autozone.com/znetcs/product-info/en/US/wwd/16022/image/3/"
         },
         {
-          "Radiator": "Spectra Premium/Radiator $855.99",
+          "Radiator": "Spectra Premium/Radiator",
+          "Price": "$855.99",
           "image": "http://contentinfo.autozone.com/znetcs/product-info/en/US/adi/A13004/image/3/"
         },
         {
-          "Water Pump": "Valucraft Reman/Water Pump",
+          "Water_Pump": "Valucraft Reman/Water Pump",
+          "Price": "Out of stock",
           "image": "http://contentinfo.autozone.com/znetcs/product-info/en/US/c27/57-1727/image/3/"
         },
         {
-          "Brake Rotors Front": "Duralast/Brake Pads - Front $23.99",
+          "Brake_Rotors_Front": "Duralast/Brake Pads - Front",
+          "Price": "$23.99",
           "image": "http://contentinfo.autozone.com/znetcs/product-info/en/US/epa/MKD888/image/3/"
         },
         {
-          "Fuel Pump": "N/A",
+          "Fuel_Pump": "N/A",
+          "Price": "N/A",
           "image": "N/A"
         },
         {
-          "Alternator": "Duralast/Alternator $159.99",
+          "Alternator": "Duralast/Alternator",
+          "Price": "$159.99",
           "image": "http://contentinfo.autozone.com/znetcs/product-info/en/US/dur/DL5628-7-9/image/3/"
         },
         {
-          "Timing Belt_Chain": "Dayco WPK/Timing Belt Component Kit $189.99",
+          "Timing_Belt_Chain": "Dayco WPK/Timing Belt Component Kit",
+          "Price": "$189.99",
           "image": "http://contentinfo.autozone.com/znetcs/product-info/en/US/dyc/WP310K1A/image/3/"
         },
         {
-          "Thermostat": "Duralast/Thermostat $19.99",
+          "Thermostat": "Duralast/Thermostat",
+          "Price": "$19.99",
           "image": "http://contentinfo.autozone.com/znetcs/product-info/en/US/cst/15238/image/3/"
         }
       ]
     },
     {
-      "make": "Chevy",
-      "id": 2,
+      "make": "Chevrolet",
+      "id": 1,
       "model": "Silverado",
       "year": "2000",
       "image": "http://static.cargurus.com/images/site/2009/11/25/16/02/2000_chevrolet_silverado_1500_ls_ext_cab_short_bed_2wd-pic-4648878499764799064.jpeg",
       "autozoneparts": [
         {
-          "Battery": "Duralast Gold/Battery $138.99",
+          "Battery": "Duralast Gold/Battery",
+          "Price": "$138.99",
           "image": "http://contentinfo.autozone.com/znetcs/product-info/en/US/jci/51RS-DLG/image/3/"
         }
       ]
     }
-  ]
+  ],
+    "todos": [
+      {
+        "name": "is this working",
+        "date": "10/20/15",
+        "odometer": "34000"
+      }
+    ]
 }
