@@ -13,7 +13,7 @@
 <div id="pricing-table" class="clear" ng-repeat="vehicle in vehicles | filter:{id:id}">
 
     <div class="plan">
-        <h3>AutoZone Prices<span>{{vehicle.autozoneparts[0].Price}}</span></h3>         
+        <h3><a href="{{vehicle.autozoneparts[0].orgUrl}}" target="blank">Buy at Autozone</a><span>{{vehicle.autozoneparts[0].Price}}</span></h3>         
         <ul>
           <li><b>{{vehicle.autozoneparts[0].Battery}}</b></li>
             <li><img class="partImg" ng-src="{{vehicle.autozoneparts[0].image}}" width= "50%"></li>
@@ -21,7 +21,7 @@
     </div>
 
     <div class="plan">
-        <h3>AutoZone Prices<span>{{vehicle.autozoneparts[1].Price}}</span></h3>         
+        <h3><a href="{{vehicle.autozoneparts[1].orgUrl}}" target="blank">Buy at Autozone</a><span>{{vehicle.autozoneparts[1].Price}}</span></h3>         
         <ul>
           <li><b>{{vehicle.autozoneparts[1].Starter}}</b></li>
             <li><img class="partImg" ng-src="{{vehicle.autozoneparts[1].image}}" width= "60%"></li>
@@ -29,7 +29,7 @@
     </div>
 
     <div class="plan">
-        <h3>AutoZone Prices<span>{{vehicle.autozoneparts[2].Price}}</span></h3>         
+        <h3><a href="{{vehicle.autozoneparts[2].orgUrl}}" target="blank">Buy at Autozone</a><span>{{vehicle.autozoneparts[2].Price}}</span></h3>         
         <ul>
           <li><b>{{vehicle.autozoneparts[2].Radiator}}</b></li>
             <li><img class="partImg" ng-src="{{vehicle.autozoneparts[2].image}}" width= "50%"></li>
@@ -37,7 +37,7 @@
     </div>
 
     <div class="plan">
-        <h3>AutoZone Prices<span>{{vehicle.autozoneparts[3].Price}}</span></h3>         
+        <h3><a href="{{vehicle.autozoneparts[3].orgUrl}}" target="blank">Buy at Autozone</a><span>{{vehicle.autozoneparts[3].Price}}</span></h3>         
         <ul>
           <li><b>{{vehicle.autozoneparts[3].Water_Pump}}</b></li>
             <li><img class="partImg" ng-src="{{vehicle.autozoneparts[3].image}}" width= "50%"></li>
@@ -45,23 +45,23 @@
     </div>
 
     <div class="plan">
-        <h3>AutoZone Prices<span>{{vehicle.autozoneparts[4].Price}}</span></h3>         
+        <h3><a href="{{vehicle.autozoneparts[4].orgUrl}}" target="blank">Buy at Autozone</a><span>{{vehicle.autozoneparts[4].Price}}</span></h3>         
         <ul>
           <li><b>{{vehicle.autozoneparts[4].Brake_Rotors_Front}}</b></li>
             <li><img class="partImg" ng-src="{{vehicle.autozoneparts[4].image}}" width= "50%"></li>
         </ul> 
     </div>
 
-    <!-- <div class="plan">
-        <h3>AutoZone Prices<span>{{vehicle.autozoneparts[5].Price}}</span></h3>         
+    <div class="plan">
+        <h3><a href="{{vehicle.autozoneparts[5].orgUrl}}" target="blank">Buy at Autozone</a><span>{{vehicle.autozoneparts[5].Price}}</span></h3>         
         <ul>
           <li><b>{{vehicle.autozoneparts[5].Fuel_Pump}}</b></li>
             <li><img class="partImg" ng-src="{{vehicle.autozoneparts[5].image}}" width= "50%"></li>
         </ul> 
-    </div> -->
+    </div>
 
     <div class="plan">
-        <h3>AutoZone Prices<span>{{vehicle.autozoneparts[6].Price}}</span></h3>         
+        <h3><a href="{{vehicle.autozoneparts[6].orgUrl}}" target="blank">Buy at Autozone</a><span>{{vehicle.autozoneparts[6].Price}}</span></h3>         
         <ul>
           <li><b>{{vehicle.autozoneparts[6].Alternator}}</b></li>
             <li><img class="partImg" ng-src="{{vehicle.autozoneparts[6].image}}" width= "60%"></li>
@@ -69,18 +69,10 @@
     </div>
 
     <div class="plan">
-        <h3>AutoZone Prices<span>{{vehicle.autozoneparts[7].Price}}</span></h3>         
+        <h3><a href="{{vehicle.autozoneparts[7].orgUrl}}" target="blank">Buy at Autozone</a><span>{{vehicle.autozoneparts[7].Price}}</span></h3>         
         <ul>
-          <li><b>{{vehicle.autozoneparts[7].Timing_Belt_Chain}}</b></li>
-            <li><img class="partImg" ng-src="{{vehicle.autozoneparts[7].image}}" width= "50%"></li>
-        </ul> 
-    </div>
-
-    <div class="plan">
-        <h3>AutoZone Prices<span>{{vehicle.autozoneparts[8].Price}}</span></h3>         
-        <ul>
-          <li><b>{{vehicle.autozoneparts[8].Thermstat}}</b></li>
-            <li><img class="partImg" ng-src="{{vehicle.autozoneparts[8].image}}" width= "70%"></li>
+          <li><b>{{vehicle.autozoneparts[7].Thermstat}}</b></li>
+            <li><img class="partImg" ng-src="{{vehicle.autozoneparts[7].image}}" width= "70%"></li>
         </ul> 
     </div>
 

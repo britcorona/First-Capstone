@@ -1,12 +1,17 @@
 @import url(http://fonts.googleapis.com/css?family=Raleway);
-.searchBarOnCars {
-  margin-left: 600px;
-  width: 20%;
-  font-size: 1.5em; }
+body {
+  background: #303030; }
 
-.wordingInNav {
+.searchBarOnCars {
+  font-size: 1.5em;
+  margin-top: 5px; }
+
+#wordingInNav {
   text-align: center;
   font-weight: bold; }
+
+.push {
+  color: white; }
 
 a {
   color: black; }
@@ -110,16 +115,15 @@ a:hover {
 #cssmenu > ul > li > a:hover:after {
   background: #47c9af; }
 
-* {
-  margin: 0;
-  padding: 0; }
+.outerDiv {
+  margin-top: 20px; }
 
-div {
-  margin: 20px; }
-
-ul.hopethisworks {
+.hopethisworks {
   list-style-type: none;
-  width: 350px; }
+  width: 300px; }
+
+.carImg {
+  border-radius: 100%; }
 
 h3 {
   font: bold 20px/1.5 Helvetica, Verdana, sans-serif; }
@@ -131,12 +135,13 @@ li img {
 li p {
   font: 200 12px/1.5 Georgia, Times New Roman, serif; }
 
-li {
+.whiteBubble {
   padding: 10px;
   overflow: auto; }
 
-li:hover {
-  background: #eee;
-  cursor: pointer; }
+.whiteBubble:hover {
+  background: #47c9af;
+  cursor: pointer;
+  border-radius: 10%; }
 
 /*# sourceMappingURL=pricesPageStyle.css.map */
