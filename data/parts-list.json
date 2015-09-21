@@ -443,7 +443,9 @@
       {
         "name": "is this working",
         "date": "10/20/15",
-        "odometer": "34000"
+        "odometer": "34000",
+        "notes": "Here is my note",
+        "checked": false
       }
     ]
 }

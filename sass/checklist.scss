@@ -102,31 +102,52 @@ body{
   background: #47c9af;
 }
 
+//-------Aligning both divs side-by-side-------
 
-
-//-----------what I have in the navbar--------
-
-.wordingInNav2 {
-  text-align: center;
-  font-weight: bold;
-  float: left;
-  margin-left: 55%;
+.outerDiv {
+  margin: 30px 30px;
 }
+
+
 
 
 //------add form-----
 
-#formToDo {
-  margin-top: 5%;
-  width: 20%;
-  margin-left: 10%;
-}
-
 .submitButton {
-  margin-left: 30%;
+  margin-top: 10px;
+}
+
+.titleAboveForm {
+  color: white;
 }
 
 
 
 
-//-------to do service stuff----
+//-------to do service div----
+
+.wordingInTodos {
+  color: white;
+  text-align: center;
+}
+
+.todosColorNposition {
+  color: white;
+}
+
+.removeDots {
+  list-style-type: none;
+}
+
+
+//------history div-----
+
+.historyList {
+  color: white;
+  margin-top: 20px;
+}
+
+#startingState {
+  color: white;
+}
+

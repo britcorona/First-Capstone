@@ -1,17 +1,17 @@
 <link rel="stylesheet" type="text/css" href="styles/pricesPageStyle.css">
 
 <nav id="cssmenu">
-			<ul>
-				<li><a href="/#/">Home</a></li>
-				<li class="active"><a href="#">Car Part Prices</a></li>
-		    <li><a href="/#/checklist">View Checklist</a></li>
-		    <li class="push">Push</li>
-		    <li id="wordingInNav"><h4>Search or Select a vehicle to see car part prices.</h4></li>
-		    <li class="push">Push</li>
-		    <li class="push">Push</li>
-		    <li class="push">Push</li>
-		    <li><input class="searchBarOnCars" type="text" ng-model="carSearchText" placeholder="Make/Model/Year" /></li>
-			</ul>
+	<ul>
+		<li><a href="/#/">Home</a></li>
+		<li class="active"><a href="#">Car Part Prices</a></li>
+    <li><a href="/#/checklist">View Checklist</a></li>
+    <li class="push">Push</li>
+    <li id="wordingInNav"><h4>Search or Select a vehicle to see car part prices.</h4></li>
+    <li class="push">Push</li>
+    <li class="push">Push</li>
+    <li class="push">Push</li>
+    <li><input class="searchBarOnCars" type="text" ng-model="carSearchText" placeholder="Make/Model/Year" /></li>
+	</ul>
 </nav>
 
 
@@ -20,7 +20,7 @@
 		  <ul class="hopethisworks">
 		  	<a href="#/info/{{ vehicle.$id }}">
 			    <li class="whiteBubble">
-			      <img class="carImg" ng-src="{{vehicle.image}}" height="35%" width= "45%">
+			      <img class="carImg" ng-src="{{vehicle.image}}" width= "55%">
 			      <h5>{{vehicle.make}}</h5>
 			      <h5>{{vehicle.model}}</h5>
 			      <h5>{{vehicle.year}}</h5>

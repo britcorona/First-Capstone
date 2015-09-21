@@ -8,35 +8,62 @@
 	</ul>
 </nav>
 
-	<h4 class="wordingInNav2">Your vehicle serivce checklist.</h4>
+<div class="outerDiv">
 
-	<form id="formToDo">
-  <div class="form-group">
-    <label for="nameTodo">Name</label>
-    <input type="text" class="form-control" id="nameTodo" placeholder="Repair" ng-model="newToDo.name">
-  </div>
-  <div class="form-group">
-    <label for="dateToDo">Date</label>
-    <input type="text" class="form-control" id="dateToDo" placeholder="ex: mm/dd/yy" ng-model="newToDo.date">
+	<div class="leftSide col-md-4">
 
+		<form id="formToDo">
+		  <div class="form-group">
+		    <label for="nameTodo" class="titleAboveForm">To Do</label>
+		    <input type="text" class="form-control" id="nameTodo" placeholder="Maintenance Issue" ng-model="newToDo.name">
+		  </div>
 
-
-  </div>
-  <div class="form-group">
-    <label for="odometerToDo">Odometer</label>
-    <input type="text" class="form-control" id="odometerToDo" placeholder="83900" ng-model="newToDo.odometer">
-  </div>
-  <button class="btn btn-default submitButton" ng-click="addToDo()">Submit</button>
-</form>
+		  <div class="form-group">
+		    <label for="dateToDo" class="titleAboveForm">Date</label>
+		    <input type="text" class="form-control" id="dateToDo" placeholder="ex: mm/dd/yy" ng-model="newToDo.date">
+		  </div>
 
 
-	<div ng-repeat="todo in todos">
-	  <ul>
-		    <li>
-		      {{todo.name}} {{todo.date}} {{todo.odometer}}
-		    </li>
-	   </ul>
+		  <div class="form-group">
+		    <label for="odometerToDo" class="titleAboveForm">Odometer</label>
+		    <input type="text" class="form-control" id="odometerToDo" placeholder="ex: 83900" ng-model="newToDo.odometer">
+		  </div>
+
+		  <h5 class="titleAboveForm">Notes</h5>
+		  <textarea class="form-control" rows="2"  ng-model="newToDo.notes" placeholder="Remember to..."></textarea>
+
+			  <button class="btn btn-default submitButton" ng-click="addToDo()">Submit</button>
+
+		</form>
 	</div>
 
+	<div class="rightSide col-md-8" id="one">
 
-	
+		<h4 class="wordingInTodos">Your vehicle serivce checklist.</h4>
+
+			<div ng-repeat="todo in todos" class="todosColorNposition">
+
+			  <ul class="removeDots">
+			    <li>
+			      <button type="button" id="checkButton" class="btn btn-default btn-sm" ng-click="settingChecked(todo)" ng-hide="todo.checked">
+						  <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+						
+							{{todo.name}} | {{todo.date}} | {{todo.odometer}} | {{todo.notes}}
+							</button>
+			    </li>
+			  </ul>
+
+			</div>
+	</div>
+</div>
+
+
+<div class="historyList">
+	<h4>History</h4>
+			<div ng-repeat="todo in todos" id="startingState" ng-click="settingChecked(todo)" ng-show="todo.checked" class="menu">
+		  {{todo.name}} | {{todo.date}} | {{todo.odometer}} | {{todo.notes}}
+		  <button>Undo</button>
+		  </div>
+</div>
+
+

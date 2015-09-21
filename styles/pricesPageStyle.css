@@ -125,8 +125,8 @@ a:hover {
 .carImg {
   border-radius: 100%; }
 
-h3 {
-  font: bold 20px/1.5 Helvetica, Verdana, sans-serif; }
+h5 {
+  color: white; }
 
 li img {
   float: left;
@@ -142,6 +142,9 @@ li p {
 .whiteBubble:hover {
   background: #47c9af;
   cursor: pointer;
-  border-radius: 10%; }
+  border-radius: 10%;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1.2); }
 
 /*# sourceMappingURL=pricesPageStyle.css.map */

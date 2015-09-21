@@ -25,11 +25,45 @@ define([
 			$scope.todos.$add({
 				name: $scope.newToDo.name,
 				date: $scope.newToDo.date, 
-				odometer: $scope.newToDo.odometer
+				odometer: $scope.newToDo.odometer,
+				notes: $scope.newToDo.notes
 			});
 			//This will clear the boxes in the form once the add button is clicked.
 			$scope.newToDo = {"":""};
 		};
+
+
+		$scope.settingChecked = function(todo) {
+			//console.log('todo', todo);
+			if ( todo.checked === false) {
+				ref.child(todo.$id).update({'checked': true});
+			} else {
+				ref.child(todo.$id).update({'checked': false});
+			}
+		};
+
+
+		var menuH = $('.menu').height();
+			$('.menu').css('top', -menuH);
+
+			var animating = false;
+
+			$('.toggle-bar').on('click', function () {
+		    if (!animating) {
+	        animating = true;
+	        if ($('.menu').css('top') == (-menuH) + 'px') {
+            $('.container').stop().animate({'height': menuH + 30});
+            $('.menu').stop().animate({'top': 30}, 500, function () {
+              animating = false;
+          	});
+	        } else {
+            $('.container').stop().animate({'height': 30});
+            $('.menu').stop().animate({'top': -menuH}, 500, function () {
+              animating = false;
+            });
+	        }
+		    }
+			});
 
 
 	}]);
