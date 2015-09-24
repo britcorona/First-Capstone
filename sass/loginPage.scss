@@ -1,45 +1,61 @@
 // //----Twitter Sign-In Button----
 
-*{
-  padding: 0;
-  margin: 0;
-}
 body {
-  background:#525151;
-}
-.box {
-  width:200px;
-  height:180px;
-  background: #fff;
-  margin: 100px auto;
-  padding: 20px;
-  
-  border-radius:10px;
-}
-.logo {
-  width:40px;
-  height:40px;
-  margin:20px auto 30px;
-  
-}
-.logo img{
-  width: 100%;
- 
-}
-.box a{
- 
-  text-decoration: none;
-  display: block;
-  margin-top: 10px;
-  padding:10px 0 ;
-  background:#0084b4;
+  margin: auto;
   text-align: center;
-  color:#fff;
-  font-family:arial;
-  border-radius:5px;
+  padding: 2em;
+  background: #303030;
 }
-.box a.f{
-  background:#3b5998;
 
+.wrapper {
+  background: rgba(255,255,255, 0.8);
+  padding: .1em 2em 2em;
+  display: inline-block;
+  border-radius: 2em;
+}
+
+h3 {
+  color: #333;
+  font-weight: 100;
+  font-size: 1.5em;
+}
+
+$network-colors: (
+  facebook: #4c69ba,
+  twitter: lightblue,
+  google: red,
+  github: #666,
+  friendster: fff
+) !default;
+
+%share {
+ padding: .3em .8em;
+ font-family: sans-serif;
+ font-size: 1.2em;
+ font-weight: 100;
+ border: 1px solid;
+ border-radius: .25em;
+ cursor: pointer;
+}
+
+@mixin networkColors($color) {
+  @if type-of($color) == color {
+    @extend %share;
+    background: $color;
+    color: lighten($color, 60%);
+    border-color: darken($color, 20%);
+    &:hover {
+      background: darken($color, 10%);
+    }
+  } @else {
+    @warn '`#{$color} is not a color!';
+    content: '`#{$color} is not a color!';
+  }
+}
+
+@each $network, $color in $network-colors {
+  .#{$network}-share--button {
+    @include networkColors($color);
+  }
 }
 

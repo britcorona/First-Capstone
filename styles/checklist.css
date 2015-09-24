@@ -112,10 +112,23 @@ body {
   text-align: center; }
 
 .todosColorNposition {
-  color: white; }
+  color: white;
+  padding-left: 90px; }
 
 .removeDots {
   list-style-type: none; }
+
+.grow:hover {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1); }
+
+#checkButton {
+  border-radius: 50%; }
+
+#undoButton {
+  border-radius: 50%;
+  font-size: .8em; }
 
 .historyList {
   color: white;

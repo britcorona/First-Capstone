@@ -20,10 +20,14 @@ define([
 			  }
 			});
 		}])
-		.controller("checklistCtrl", ["$scope", "$firebaseArray", "currentAuth", function($scope, $firebaseArray, currentAuth) {
+		.controller("checklistCtrl", ["$scope", "$firebaseArray", "currentAuth", "$location", function($scope, $firebaseArray, currentAuth, $location) {
 
 			//This will connect to firebase and get the info
-		  var ref = new Firebase("https://first-capstone.firebaseio.com/todos");
+
+		  var authRef = new Firebase("https://first-capstone.firebaseio.com");
+		  var uid = authRef.getAuth().uid;
+		  var ref = new Firebase("https://first-capstone.firebaseio.com/todos/" + uid);
+		  //console.log("path", ref.child(uid).key());
 
 		 // download the data into a local object
 		  $scope.todos = $firebaseArray(ref);
@@ -50,9 +54,11 @@ define([
 			}
 		};
 
+		//LogOut
 		$('#twitterOut').on('click', function() {
 			var nextRef = new Firebase("https://first-capstone.firebaseio.com");
 			nextRef.unauth();
+			location.reload();
 		});
 
 	}]);

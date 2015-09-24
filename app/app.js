@@ -36,4 +36,4 @@ $rootScope.$on("$routeChangeError", function(event, next, previous, error) {
 
 	}]);
 });
-console.log("app.js file is loaded");
+//console.log("app.js file is loaded");

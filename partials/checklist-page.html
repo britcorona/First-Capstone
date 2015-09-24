@@ -54,12 +54,10 @@
 			<div ng-repeat="todo in todos" class="todosColorNposition">
 
 			  <ul class="removeDots">
-			    <li>
-			      <button type="button" id="checkButton" class="btn btn-default btn-sm" ng-click="settingChecked(todo)" ng-hide="todo.checked">
-						  <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-						
+			    <li ng-click="settingChecked(todo)" ng-hide="todo.checked" class="grow">
+			      <button type="button" id="checkButton" class="btn btn-default btn-md">
+						  <span class="glyphicon glyphicon-ok" aria-hidden="true"></span></button>
 							{{todo.name}} | {{todo.date}} | {{todo.odometer}} | {{todo.notes}}
-							</button>
 			    </li>
 			  </ul>
 
@@ -72,7 +70,8 @@
 	<h4>History</h4>
 			<div ng-repeat="todo in todos" id="startingState" ng-click="settingChecked(todo)" ng-show="todo.checked" class="menu">
 		  {{todo.name}} | {{todo.date}} | {{todo.odometer}} | {{todo.notes}}
-		  <button>Undo</button>
+		  <button type="button" id="undoButton" class="btn btn-default btn-md">
+			<span class="glyphicon" aria-hidden="true"></span>Undo</button>
 		  </div>
 </div>
 
