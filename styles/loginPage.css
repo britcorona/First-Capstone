@@ -1,0 +1,38 @@
+* {
+  padding: 0;
+  margin: 0; }
+
+body {
+  background: #525151; }
+
+.box {
+  width: 200px;
+  height: 180px;
+  background: #fff;
+  margin: 100px auto;
+  padding: 20px;
+  border-radius: 10px; }
+
+.logo {
+  width: 40px;
+  height: 40px;
+  margin: 20px auto 30px; }
+
+.logo img {
+  width: 100%; }
+
+.box a {
+  text-decoration: none;
+  display: block;
+  margin-top: 10px;
+  padding: 10px 0;
+  background: #0084b4;
+  text-align: center;
+  color: #fff;
+  font-family: arial;
+  border-radius: 5px; }
+
+.box a.f {
+  background: #3b5998; }
+
+/*# sourceMappingURL=loginPage.css.map */

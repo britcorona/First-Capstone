@@ -9,10 +9,18 @@ define([
 			.when('/checklist', {
 				templateUrl: '../partials/checklist-page.html',
 				controller: 'checklistCtrl',
-				controllerAs: 'ChecklistPageCtrl'
+				controllerAs: 'ChecklistPageCtrl',
+				resolve: {
+		    // controller will not be loaded until $waitForAuth resolves
+		    // Auth refers to our $firebaseAuth wrapper in the example above
+		    "currentAuth": ["Auth", function(Auth) {
+		      // $waitForAuth returns a promise so the resolve waits for it to complete
+		      return Auth.$requireAuth();
+		    }]
+			  }
 			});
 		}])
-		.controller("checklistCtrl", ["$scope", "$firebaseArray", function($scope, $firebaseArray) {
+		.controller("checklistCtrl", ["$scope", "$firebaseArray", "currentAuth", function($scope, $firebaseArray, currentAuth) {
 
 			//This will connect to firebase and get the info
 		  var ref = new Firebase("https://first-capstone.firebaseio.com/todos");
@@ -32,7 +40,7 @@ define([
 			$scope.newToDo = {"":""};
 		};
 
-
+		//Sets a true value for checklist item to move to the History div.
 		$scope.settingChecked = function(todo) {
 			//console.log('todo', todo);
 			if ( todo.checked === false) {
@@ -42,29 +50,10 @@ define([
 			}
 		};
 
-
-		var menuH = $('.menu').height();
-			$('.menu').css('top', -menuH);
-
-			var animating = false;
-
-			$('.toggle-bar').on('click', function () {
-		    if (!animating) {
-	        animating = true;
-	        if ($('.menu').css('top') == (-menuH) + 'px') {
-            $('.container').stop().animate({'height': menuH + 30});
-            $('.menu').stop().animate({'top': 30}, 500, function () {
-              animating = false;
-          	});
-	        } else {
-            $('.container').stop().animate({'height': 30});
-            $('.menu').stop().animate({'top': -menuH}, 500, function () {
-              animating = false;
-            });
-	        }
-		    }
-			});
-
+		$('#twitterOut').on('click', function() {
+			var nextRef = new Firebase("https://first-capstone.firebaseio.com");
+			nextRef.unauth();
+		});
 
 	}]);
 });

@@ -12,6 +12,7 @@ define([
 				controllerAs: 'FirstPageCtrl'
 			});
 		}])
-		.controller("firstCtrl", ["$scope", function($scope) {
+		.controller("firstCtrl", ["$scope", "$firebaseArray", function($scope, $firebaseArray) {
+
 	}]);
 });
