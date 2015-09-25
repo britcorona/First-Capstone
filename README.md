@@ -18,7 +18,7 @@ The http-server module is just a very basic project that will serve static files
 
 #####Serve the application
 
-Next, you go to the First-Capstone application root folder and start the server.
+Next, go to the First-Capstone application root folder and start the server.
 
 *http-server*
 
