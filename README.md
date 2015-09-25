@@ -14,13 +14,13 @@ This app is for viewing car part prices for the cars provided, and keeping a veh
 
 The http-server module is just a very basic project that will serve static files from the directory of your choice.
 
-sudo npm install -g http-server
+*sudo npm install -g http-server*
 
 #####Serve the application
 
 Next, you go to the First-Capstone application root folder and start the server.
 
-http-server
+*http-server*
 
 http://localhost:8080 (or whichever port it reports it is using) will display the application.
 
