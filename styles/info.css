@@ -99,7 +99,8 @@ body {
   background: #303030; }
 
 #pricing-table {
-  margin: 100px auto;
+  margin-left: 280px;
+  margin-top: 20px;
   text-align: center;
   width: 892px;
   /* total computed width = 222 x 3 + 226 */ }

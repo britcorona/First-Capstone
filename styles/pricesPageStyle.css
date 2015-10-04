@@ -116,7 +116,8 @@ a:hover {
   background: #47c9af; }
 
 .outerDiv {
-  margin-top: 20px; }
+  margin-top: 25px;
+  margin-bottom: 20px; }
 
 .hopethisworks {
   list-style-type: none;
