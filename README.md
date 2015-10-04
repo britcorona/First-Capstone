@@ -32,4 +32,4 @@ Go to the lib folder and *bower install*
 
 Still in the lib folder *npm install*
 
-Now that everything is installed, make sure **Grunt** is running in the lib folder and the **http-server** is running in the applications *root folder*, and view the Music History webpage.
+Now that everything is installed, make sure **Grunt** is running in the lib folder and the **http-server** is running in the applications *root folder*, and view the Know Thy Car webpage.
