@@ -6,6 +6,10 @@ This app is for viewing car part prices for the cars provided, and keeping a veh
 
 ###Running the application
 
+#####Visit https://first-capstone.firebaseapp.com/#/
+
+###OR
+
 #####Clone the repo https://github.com/britcorona/First-Capstone.git
 
 #####Install the HTTP Server
