@@ -1,0 +1,9 @@
+{
+  "firebase": "first-capstone",
+  "public": "../First-Capstone",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}
